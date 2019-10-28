@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	int i = 0, i_b = 0;
 	char *ptr = (char *) format, *buffer;
-	int (*ptr_f)(va_list, char *, int);			 
+	int (*ptr_f)(va_list, char *, int);
 	va_list arguments;
 
 	va_start(arguments, format);

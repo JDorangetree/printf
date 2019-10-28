@@ -17,6 +17,8 @@ int p_int(va_list arguments, char *buffer, int i_b);
 int percent(va_list arguments, char *buffer, int i_b);
 int print_number(int n, char *buffer, int i_b);
 int _putchar(char c);
+char *print_binary(int n);
+int p_binary(va_list arguments, char *buffer, int i_b);
 
 /**
  * struct t_input - Struct t_input
