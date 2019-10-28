@@ -14,6 +14,7 @@ int (*get_type(char *s))(va_list arguments, char *buffer, int i_b)
 		{"i", p_int},
 		{"d", p_int},
 		{"%", percent},
+		{"b", p_binary},
 		{NULL, NULL}
 	};
 	int i;
