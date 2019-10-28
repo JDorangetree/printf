@@ -10,13 +10,13 @@
  */
 int p_binary(va_list arguments, char *buffer, int i_b)
 {
-	int i = 0;
+	int i, j = 0;
 	char *ptr;
 
 	i = va_arg(arguments, int);
 	ptr = print_binary(i);
 
-	for (; ptr[i]; i++, i_b++)
-		buffer[i_b] = ptr[i];
+	for (; ptr[j]; j++, i_b++)
+		buffer[i_b] = ptr[j];
 	return (i_b);
 }

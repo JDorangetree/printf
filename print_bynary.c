@@ -1,3 +1,4 @@
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
@@ -13,7 +14,7 @@ char *print_binary(int n)
 	char *pointer;
 
 	count = 0;
-	pointer = (char *)malloc(32 + 1);
+	pointer = (char *) malloc(33);
 	if (pointer == NULL)
 		exit(EXIT_FAILURE);
 	for (c = 31 ; c >= 0 ; c--)
