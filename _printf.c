@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 			{
 				i_b = ptr_f(arguments, buffer, i_b);
 				i++;
-			}		
+			}
 		}
 		i++, ptr++;
 	}
