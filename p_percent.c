@@ -10,6 +10,7 @@
  */
 int percent(va_list arguments, char *buffer, int i_b)
 {
+	(void) arguments;
 	buffer[i_b] = '%';
 	return (++i_b);
 }
