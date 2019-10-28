@@ -28,8 +28,16 @@ int _printf(const char *format, ...)
 		else
 		{
 			ptr_f = get_type(++ptr);
-			i_b = ptr_f(arguments, buffer, i_b);
-			i++;
+			if (!ptr_f)
+			{
+				buffer[i_b] = format[i];
+				i_b++;
+			}
+			else
+			{
+				i_b = ptr_f(arguments, buffer, i_b);
+				i++;
+			}		
 		}
 		i++, ptr++;
 	}
