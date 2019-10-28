@@ -6,16 +6,14 @@
  * Description: Get type print function
  * Return: Nothing
  */
-void (*get_type(char *s))(va_list)
+int (*get_type(char *s))(va_list arguments, char *buffer, int i_b)
 {
 	t_i types[] = {
-		{"%c", p_char},
-		{"%s", p_string},
-		{"%i", p_int},
-		{"%d", p_decimal},
-		{"\n", enter},
-		{"\t", tab},
-		{"%%", percent},
+		{"c", p_char},
+		{"s", p_string},
+		{"i", p_int},
+		{"d", p_int},
+		{"%", percent},
 		{NULL, NULL}
 	};
 	int i;
@@ -23,7 +21,7 @@ void (*get_type(char *s))(va_list)
 	i = 0;
 	while (types[i].letter)
 	{
-		if (types[i].letter[1] == s[0] && s[1] != '\0')
+		if (types[i].letter[0] == s[0] && s[0] != '\0')
 			return (types[i].f);
 		i++;
 	}

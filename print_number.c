@@ -6,22 +6,33 @@
  * Description: Print an integer
  * Return: 0 Value if it works
  */
-void print_number(int n)
+int print_number(int n, char *buffer, int i_b)
 {
-	unsigned int num;
+	int b = 1, i = 0, j;
 
 	if (n < 0)
 	{
-		_putchar('-');
-		num = -n;
+		buffer[i_b] = '-';
+		i_b++;
 	}
-	else
+	while (n / b > 9 || n / b < -9)
 	{
-		num = n;
+		b = b * 10;
+		i++;
 	}
-	if (num / 10 != 0)
+	for (j = 0; j <= i; j++)
 	{
-		print_number(num / 10);
+		if (n < 0)
+		{
+			buffer[i_b] = (-(n / b) + '0');
+		}
+		else
+		{
+			buffer[i_b] = ((n / b) + '0');
+		}
+		i_b++;
+		n = n % b;
+		b = b / 10;
 	}
-	_putchar((num % 10) + '0');
+	return (i_b);
 }
