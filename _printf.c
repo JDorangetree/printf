@@ -23,23 +23,14 @@ int _printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] != '%')
-		{
-			buffer[i_b] = format[i];
-			i_b++;
-		}
+			buffer[i_b] = format[i], i_b++;
 		else
 		{
 			ptr_f = get_type(++ptr);
 			if (!ptr_f)
-			{
-				buffer[i_b] = format[i];
-				i_b++;
-			}
+				buffer[i_b] = format[i], i_b++;
 			else
-			{
-				i_b = ptr_f(arguments, buffer, i_b);
-				i++;
-			}
+				i_b = ptr_f(arguments, buffer, i_b), i++;
 		}
 		i++, ptr++;
 	}
