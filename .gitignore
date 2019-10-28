@@ -57,5 +57,6 @@ flycheck_*.el
 # Omit main file
 
 main.c
+copy.md
 
 # End of https://www.gitignore.io/api/emacs
