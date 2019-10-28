@@ -14,6 +14,8 @@ int _printf(const char *format, ...)
 	int (*ptr_f)(va_list, char *, int);
 	va_list arguments;
 
+	if (!format)
+		return (-1);
 	va_start(arguments, format);
 	buffer = malloc(sizeof(char) * SIZE);
 	if (!buffer)
