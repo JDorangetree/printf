@@ -1,10 +1,12 @@
 #include "holberton.h"
 /**
- * print_number - Print an integer
- * @n: Parameter input
+ * print_number - Print number
+ * @n: input number
+ * @buffer: memory field to host the printf output
+ * @i_b: buffer position
  *
- * Description: Print an integer
- * Return: 0 Value if it works
+ * Description: print number
+ * Return: 0
  */
 int print_number(int n, char *buffer, int i_b)
 {
