@@ -37,7 +37,6 @@ char *print_binary(int n)
 			return (pointer);
 		pointer++;
 	}
-
 	free(pointer);
 	return (pointer);
 }
