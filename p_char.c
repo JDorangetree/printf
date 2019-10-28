@@ -1,7 +1,9 @@
 #include "holberton.h"
 /**
  * p_char - Print characters
- * @format: Parameter input
+ * @arguments: list of arguments passed to printf
+ * @buffer: memory field to host the printf output
+ * @i_b: buffer position
  *
  * Description: Print characters
  * Return: 0
