@@ -1,13 +1,13 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
-#define SIZE 1024 
+#define SIZE 1024
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdarg.h>
-#include <string.h>
+
 
 int _printf(const char *format, ...);
 int (*get_type(char *s))(va_list arguments, char *buffer, int i_b);
