@@ -16,30 +16,28 @@ char *print_binary(int n)
 	count = 0;
 	if (n == 0)
 		return (cero);
-	else
+	pointer = (char *)malloc(33);
+	if (!pointer)
+		exit(EXIT_FAILURE);
+	for (c = 31; c >= 0; c--)
 	{
-		pointer = (char *) malloc(33);
-		if (!pointer)
-			exit(EXIT_FAILURE);
-		for (c = 31 ; c >= 0 ; c--)
-		{
-			d = n >> c;
-			if (d & 1)
-				*(pointer + count) = 1 + '0';
-			else
-				*(pointer + count) = 0 + '0';
-			count++;
-		}
-		*(pointer + count) = '\0';
-		while (pointer)
-		{
-			if (*pointer != '0')
-				flag = 1;
-			if (flag == 1)
-				return (pointer);
-			pointer++;
-		}
+		d = n >> c;
+		if (d & 1)
+			*(pointer + count) = 1 + '0';
+		else
+			*(pointer + count) = 0 + '0';
+		count++;
 	}
+	*(pointer + count) = '\0';
+	while (pointer)
+	{
+		if (*pointer != '0')
+			flag = 1;
+		if (flag == 1)
+			return (pointer);
+		pointer++;
+	}
+
 	free(pointer);
 	return (pointer);
 }
