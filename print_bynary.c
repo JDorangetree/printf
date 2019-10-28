@@ -11,13 +11,15 @@
 char *print_binary(int n)
 {
 	int c, d, count, flag = 0;
-	char *pointer;
+	char *pointer, *cero = "0";
 
 	count = 0;
-	pointer = (char *) malloc(33);
-	if (pointer == NULL)
+	if (n == 0)
+		return (cero);
+	pointer = (char *)malloc(33);
+	if (!pointer)
 		exit(EXIT_FAILURE);
-	for (c = 31 ; c >= 0 ; c--)
+	for (c = 31; c >= 0; c--)
 	{
 		d = n >> c;
 		if (d & 1)
@@ -36,5 +38,5 @@ char *print_binary(int n)
 		pointer++;
 	}
 	free(pointer);
-	return (NULL);
+	return (pointer);
 }
