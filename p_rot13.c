@@ -18,7 +18,6 @@ int p_rot13(va_list arguments, char *buffer, int i_b)
 
 	if (!p)
 		p = "(ahyy)";
-	i = 0;
 	while (p[i])
 	{
 		j = 0;
