@@ -37,10 +37,6 @@ char *print_binary(int n)
 			return (pointer);
 		pointer++;
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> 83e81ce91617e76a48b48dabc67692793e2ea628
 	free(pointer);
 	return (pointer);
 }
