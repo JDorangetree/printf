@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * p_string - Print string
+ * p_binary - Print string
  * @arguments: input string
  * @buffer: memory field to host the printf output
  * @i_b: buffer position
