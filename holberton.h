@@ -1,7 +1,7 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
-#define SIZE 1024
+#define SIZE 2048
 
 #include <stdio.h>
 #include <stdlib.h>
