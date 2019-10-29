@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * percent - Print %
+ * p_percent - Print %
  * @arguments: list of arguments passed to printf
  * @buffer: memory field to host the printf output
  * @i_b: buffer position
