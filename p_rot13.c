@@ -33,9 +33,9 @@ int p_rot13(va_list arguments, char *buffer, int i_b)
 		}
 		i++;
 	}
-
 	i = 0;
 	for (; ptr[i]; i++, i_b++)
 		buffer[i_b] = ptr[i];
+	free(ptr);
 	return (i_b);
 }
