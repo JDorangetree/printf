@@ -1,4 +1,5 @@
 #include "holberton.h"
+int _strlen(char *string);
 /**
  * _printf - Print function all the parameters
  * @format: Input parameters
@@ -24,7 +25,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 			buffer[i_b] = format[i], i_b++;
-		else
+		else if (_strlen(ptr) != 1)
 		{
 			ptr_f = get_type(++ptr);
 			if (!ptr_f)
@@ -32,10 +33,28 @@ int _printf(const char *format, ...)
 			else
 				i_b = ptr_f(arguments, buffer, i_b), i++;
 		}
+		else
+			i_b = -1;
 		i++, ptr++;
 	}
 	va_end(arguments);
 	write(1, buffer, i_b);
 	free(buffer);
 	return (i_b);
+}
+/**
+ * _strlen - Get the string lenght
+ * @string: Input to evaluate
+ *
+ * Description: Get the lenght of the string
+ * passed.
+ * Return: The lenght number
+ */
+int _strlen(char *string)
+{
+	int n = 0;
+
+	while (string[n] != '\0')
+		n++;
+	return (n);
 }
