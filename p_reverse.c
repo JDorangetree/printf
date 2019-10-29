@@ -14,7 +14,12 @@ int p_reverse(va_list arguments, char *buffer, int i_b)
 	char *ptr = va_arg(arguments, char *);
 
 	if (!ptr)
+	{
 		ptr = "(null)";
+		for (n = 0; ptr[n]; n++, i_b++)
+			buffer[i_b] = ptr[n];
+		return (i_b);
+	}
 	n = _strlen(ptr);
 	while (n >= 0)
 	{
