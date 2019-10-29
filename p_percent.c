@@ -8,7 +8,7 @@
  * Description: print %
  * Return: 0
  */
-int percent(va_list arguments, char *buffer, int i_b)
+int p_percent(va_list arguments, char *buffer, int i_b)
 {
 	(void) arguments;
 	buffer[i_b] = '%';
