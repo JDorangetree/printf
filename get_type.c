@@ -17,6 +17,7 @@ int (*get_type(char *s))(va_list arguments, char *buffer, int i_b)
 		{"r", p_reverse},
 		{"R", p_rot13},
 		{"u", p_unumber},
+		{"o", p_octal},
 		{"x", p_hexa},
 		{"X", p_Hexad},
 		{"%", p_percent},
