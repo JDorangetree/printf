@@ -25,7 +25,7 @@ int p_Hexad(va_list arguments, char *buffer, int i_b)
 			hexadecimal[j++] = 55 + remainder;
 		decimal = decimal / 16;
 	}
-	for (i = j; i >= 0; i--, i_b++)
-		buffer[i_b] = hexadecimal[i];
+	for (i = j; i > 0; i--, i_b++)
+		buffer[i_b] = hexadecimal[i - 1];
 	return (i_b);
 }
