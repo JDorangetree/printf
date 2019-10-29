@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * p_rot13 - Print rot 13
  * @arguments: list of arguments passed to printf
