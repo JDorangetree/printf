@@ -22,6 +22,7 @@ int p_unumber(va_list arguments, char *buffer, int i_b);
 int p_hexa(va_list arguments, char *buffer, int i_b);
 int p_Hexad(va_list arguments, char *buffer, int i_b);
 int p_octal(va_list arguments, char *buffer, int i_b);
+int p_address(va_list arguments, char *buffer, int i_b);
 int print_number(int n, char *buffer, int i_b);
 int _strlen(char *string);
 int _putchar(char c);
