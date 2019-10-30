@@ -1,0 +1,52 @@
+.TH _PRINTF 1 "October 2019" "Holberton School" "Linux Programmers Manual"
+.SH NAME
+.NM _printf - format and print data with number of characters printed as return
+.SH SYNOPSIS
+.NM _printf is a function with one mandatory argument FORMAT and additional
+arguments that may be many or none.requires the header "holberton.h". #include
+holberton.h Its prototype goes as follows: int _printf(const char *format, ...);
+.SH DESCRIPTION
+The function _printf writes output to stdout, it uses an internal buffer of 2048 bytes.
+Return:
+
+.SH Return Value
+after an execution this function returns the number of characters
+printed (excluding the null byte used to finalize the output to the strings)
+.SH The conversion specifier
+For this version _printf is capable to identify different format specificators,
+A character that speciies the type of conversion to be applied. the conversion
+specifiers and their meaning are:
+
+.SH %
+the % character is used to identify the type of format to use in the output.
+the function detects "%" and evaluates the character that is next.
+if you cannot find the character in the specified format types
+should be print the character % as part of the string.
+
+.SH c
+The int argument is converted to an unsigned char, and the resulting character is printed.
+.SH s
+Character are written up to (but not including)
+a termination null byte (' '); must contain a termination null byte.
+.SH d, i
+The argument int is converted to a signed decimal notation.
+.SH o,u, x, X
+The argument is converted to unsigned octal ( o ),unsigned decimal ( u ), or
+unsigned hexamedical ( x and X )notation. The letters abcdef are used for x conversion
+and the letters ABCDEF are used for X conversion.
+.SH R
+The argument received is expected to be a pointer type char* to an array of characters. 
+Characters from this array are encoded to ROT13 and printed in order up to.
+.SH r
+reverse a string.
+.SH b
+The argument is converted to an unsignedint value and
+then operated to get its binary representation (base 2).
+
+.SH p
+print a addres of a pointer
+.SH AUTHORS
+
+.NM
+Campo Pinillos - https://github.com/campopinillos
+Julian Naranjo - https://github.com/JDorangetree
