@@ -44,7 +44,7 @@ The argument is converted to an unsignedint value and
 then operated to get its binary representation (base 2).
 
 .SH p
-
+print a addres of a pointer
 .SH AUTHORS
 
 .NM
