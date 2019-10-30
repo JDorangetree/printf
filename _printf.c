@@ -1,5 +1,4 @@
 #include "holberton.h"
-int _strlen(char *string);
 /**
  * _printf - Print function all the parameters
  * @format: Input parameters
