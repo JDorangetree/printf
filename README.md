@@ -157,7 +157,7 @@ int Hexa(char s, char *buffer, int i_b);
 ```
 
 #### [p_percent](./p_percent.c)
-* Flag %o, the prototype:
+* Flag %, the prototype:
 ```c
 int p_percent(va_list arguments, char *buffer, int i_b);
 ```
