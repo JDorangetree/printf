@@ -28,8 +28,6 @@ int print_number(int n, char *buffer, int i_b);
 char *print_binary(int n);
 int Hexa(char s, char *buffer, int i_b);
 int _strlen(char *string);
-int _putchar(char c);
-
 
 /**
  * struct t_input - Struct t_input
