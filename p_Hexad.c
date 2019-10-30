@@ -10,11 +10,15 @@
  */
 int p_Hexad(va_list arguments, char *buffer, int i_b)
 {
-	long decimal, remainder;
+	unsigned int decimal, remainder;
 	int i, j = 0;
 	char hexadecimal[100];
 
+<<<<<<< HEAD
 	decimal = va_arg(arguments, long);
+=======
+	decimal = va_arg(arguments, unsigned int);
+>>>>>>> 7ff0db819dbfd3743d6865eca4418179fec48f56
 	if (decimal == 0)
 		hexadecimal[j++] = 48;
 	while (decimal)
