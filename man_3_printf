@@ -1,6 +1,7 @@
-.TH _PRINTF 1 "October 2019" "Holberton School" "Linux Programmers Manual"
+.TH _PRINTF 3 "October 2019" "Holberton School" "Linux Programmers Manual"
 .SH NAME
-.NM _printf - format and print data with number of characters printed as return
+.B _printf
+- _printf formats and prints its arguments and returns the number of characters printed out.
 .SH SYNOPSIS
 .NM _printf is a function with one mandatory argument FORMAT and additional
 arguments that may be many or none.requires the header "holberton.h". #include
@@ -10,7 +11,7 @@ The function _printf writes output to stdout, it uses an internal buffer of 2048
 Return:
 
 .SH Return Value
-after an execution this function returns the number of characters
+After an execution this function returns the number of characters
 printed (excluding the null byte used to finalize the output to the strings)
 .SH The conversion specifier
 For this version _printf is capable to identify different format specificators,
@@ -18,7 +19,7 @@ A character that speciies the type of conversion to be applied. the conversion
 specifiers and their meaning are:
 
 .SH %
-the % character is used to identify the type of format to use in the output.
+The % character is used to identify the type of format to use in the output.
 the function detects "%" and evaluates the character that is next.
 if you cannot find the character in the specified format types
 should be print the character % as part of the string.
@@ -38,15 +39,71 @@ and the letters ABCDEF are used for X conversion.
 The argument received is expected to be a pointer type char* to an array of characters. 
 Characters from this array are encoded to ROT13 and printed in order up to.
 .SH r
-reverse a string.
+Reverse a string.
 .SH b
-The argument is converted to an unsignedint value and
-then operated to get its binary representation (base 2).
+The argument is converted to an unsignedint value and then operated to get its binary representation (base 2).
 
 .SH p
-print a addres of a pointer
+Prints a address of a pointer
+
+.SH EXAMPLES
+
+To use the _printf function there are a couple examples of declaration and its correspondent output:
+
+
+_printf("String:[%s]\n", "I am a string !");
+.PP
+String:[I am a string !]
+
+
+_printf("Character:[%c]\n", 'H');
+.PP
+Character:[H]
+
+
+_printf("Length:[%d, %i]\n", len, len);
+.PP
+Length:[39, 39]
+
+
+_printf("Unsigned:[%u]\n", 2147484671);
+.PP
+Unsigned:[2147484671]
+
+
+_printf("Unsigned octal:[%o]\n", 2147484671);
+.PP
+Unsigned octal:[20000001777]
+
+
+_printf("Unsigned hexadecimal:[%x, %X]\n", 2147484671, 2147484671);
+.PP
+Unsigned hexadecimal:[800003ff, 800003FF]
+
+
+_printf("String:[%R]\n", "I am a string !");
+.PP
+String:[V nz n fgevat !]
+
+
+_printf("String:[%r]\n", "I am a string !");
+.PP
+String:[! gnirts a ma I]
+
+
+_printf("Binary:[%b]\n", 39);
+.PP
+Binary:[100111]
+
+
+_printf("Address:[%p]\n", (void *)0x7ffe637541f0);
+.PP
+Address:[0x7ffe637541f0]
+
+
 .SH AUTHORS
 
 .NM
 Campo Pinillos - https://github.com/campopinillos
+
 Julian Naranjo - https://github.com/JDorangetree
