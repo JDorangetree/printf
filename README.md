@@ -32,7 +32,6 @@ gcc -Wall -Werror -Wextra -pedantic *.c
 We carefully did not push any c file containing a main function in the root directory in our project. So, if you are going to test it, you should use your own main c files.
 All our main files include our main header file [holberton.h](./holberton.h): **#include holberton.h**
 While we test our main c file cases, we use the gcc flags with our _printf function and the standard printf function to compare the different outputs and improve our _printf performance.
-
 ---
 
 ## Files
@@ -164,6 +163,51 @@ int p_percent(va_list arguments, char *buffer, int i_b);
 
 ### [_strlen](./_strlen.c)
 * This file has an auxiliar function, it is going to be used in some of the about files to measure the lenght of a string, its prototype is `int _strlen(char *string);`
+
+---
+## Example
+
+To use our _printf function we our going to give you a couple examples throughout a main instance:
+
+```c
+int main(void)
+{
+    int len;
+    int len2;
+    unsigned int ui = (unsigned int)INT_MAX + 1024;
+    void *addr;
+    char c = 'c';
+
+_printf("String:[%s]\n", "I am a string !");
+_printf("Character:[%c]\n", 'H');
+_printf("Length:[%d, %i]\n", len, len);
+_printf("Unsigned:[%u]\n", ui);
+_printf("Unsigned octal:[%o]\n", ui);
+_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+_printf("String:[%R]\n", "I am a string !");
+_printf("String:[%r]\n", "I am a string !");
+_printf("Binary:[%b]\n", len);
+_printf("Address:[%p]\n", addr);
+return (0);
+}
+```
+
+##### Output
+
+This will be the output:
+
+```bash
+String:[I am a string !]
+Character:[H]
+Length:[39, 39]
+Unsigned:[2147484671]
+Unsigned octal:[20000001777]
+Unsigned hexadecimal:[800003ff, 800003FF]
+String:[V nz n fgevat !]
+String:[! gnirts a ma I]
+Binary:[100111]
+Address:[0x7ffe637541f0]
+```
 
 ---
 
