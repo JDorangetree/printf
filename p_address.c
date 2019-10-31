@@ -10,11 +10,13 @@
  */
 int p_address(va_list arguments, char *buffer, int i_b)
 {
-	long decimal, remainder, i, j = 0;
+	void *addr;
+	unsigned long int decimal, remainder, i, j = 0;
 	char hexadecimal[100];
 	char *p = "(nil)";
 
-	decimal = va_arg(arguments, long);
+	addr = va_arg(arguments, void *);
+	decimal = (unsigned long int)addr;
 	if (decimal == 0)
 	{
 		for (; p[j]; j++, i_b++)

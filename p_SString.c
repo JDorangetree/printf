@@ -16,14 +16,15 @@ int p_Sstring(va_list arguments, char *buffer, int i_b)
 
 	if (!ptr)
 		ptr = NULL;
-	for (; ptr[i]; i++)
+	while(ptr[i])
 	{
-		if (ptr[i] >= 32 && ptr[i] < 127)
-			buffer[i_b] = ptr[i], i_b++;
-		else
+		if ((ptr[i] > 0 && ptr[i] < 32) || ptr[i] >= 127)
 		{
-			i_b = Hexa(ptr[i], buffer, i_b);
+			i_b = Hexa(ptr[i], buffer, i_b), i++;
 		}
+		else
+			buffer[i_b] = ptr[i], i_b++,i++;
+			
 	}
 	return (i_b);
 }
